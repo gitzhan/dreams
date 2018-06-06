@@ -10,6 +10,7 @@
 
 	<modules>
 		<module>dreams-common</module>
+		<module>dreams-garden</module>
 	</modules>
 
 	<parent>
@@ -61,7 +62,11 @@
 				<artifactId>common-cloud</artifactId>
 				<version>${cloud.common.version}</version>
 			</dependency>
-
+			<dependency>
+				<groupId>com.dreams.cloud</groupId>
+				<artifactId>common-pro</artifactId>
+				<version>${cloud.common.version}</version>
+			</dependency>
 			<!-- mybatis版本 -->
 			<dependency>
 				<groupId>org.mybatis.spring.boot</groupId>

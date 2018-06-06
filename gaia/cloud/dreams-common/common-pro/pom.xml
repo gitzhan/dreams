@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>common-base</artifactId>
+	<artifactId>common-pro</artifactId>
 	<packaging>jar</packaging>
-	<name>common-base</name>
-	<description>common-base</description>
+	<name>common-pro</name>
+	<description>common-pro</description>
 	<parent>
 		<groupId>com.dreams.cloud</groupId>
-		<artifactId>common</artifactId>
+		<artifactId>dreams-common</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 

@@ -13,9 +13,9 @@
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 	<modules>
-
 		<module>common-boot</module>
 		<module>common-cloud</module>
+		<module>common-pro</module>
 	</modules>
 
 	<dependencyManagement>
@@ -23,10 +23,6 @@
 	</dependencyManagement>
 
 	<dependencies>
-		<dependency>
-			<groupId>io.swagger</groupId>
-			<artifactId>swagger-annotations</artifactId>
-			<version>1.5.10</version>
-		</dependency>
+		
 	</dependencies>
 </project>
