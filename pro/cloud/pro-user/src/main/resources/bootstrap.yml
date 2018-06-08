@@ -1,0 +1,26 @@
+info:
+  version: 1.0.0-SNAPSHOT
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      
+server:
+  port: 8762
+  session: 
+    timeout: 10
+  tomcat:
+    max-threads: 1000
+    uri-encoding: UTF-8
+
+feign: 
+  hystrix: 
+    enable: true
+    
+    
+    
+#mybatis: 
+#  type-aliases-package: com.james.project.lovememory
+#  config-locations: classpath:mybatis/mybatis-config.xml
+#  mapper-locations: classpath:mapper/*.xml

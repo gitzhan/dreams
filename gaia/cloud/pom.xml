@@ -16,14 +16,21 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.2.RELEASE</version>
+		<version>1.5.9.RELEASE</version>
+		<!-- 2.0.2版本会启动失败，原因是和cloud版本冲突 -->
+		<!-- <version>2.0.2.RELEASE</version> -->
 	</parent>
 
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<cloud.common.version>1.0.0-SNAPSHOT</cloud.common.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
 		<java.encoding>UTF-8</java.encoding>
+		<spring-cloud.version>Dalston.SR1</spring-cloud.version>
+		<!-- Finchley.RC2 版本子pom找不到spring-cloud-starter-eureka等依赖? -->
+		<!-- <spring-cloud.version>Finchley.RC2</spring-cloud.version> -->
 	</properties>
 
 	<dependencyManagement>
@@ -31,7 +38,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Dalston.SR1</version>
+				<version>${spring-cloud.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -83,6 +90,10 @@
 				<artifactId>druid</artifactId>
 				<version>1.0.15</version>
 			</dependency>
+				<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+			</dependency>
 			<!-- test -->
 			<dependency>
 				<groupId>com.googlecode.jmockit</groupId>
@@ -95,6 +106,30 @@
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
 				<version>3.4</version>
+			</dependency>
+			<!-- 阿里云oss -->
+			<dependency>
+				<groupId>com.aliyun.oss</groupId>
+				<artifactId>aliyun-sdk-oss</artifactId>
+				<version>2.7.0</version>
+			</dependency>
+			<!-- xstream -->
+			<!-- https://mvnrepository.com/artifact/com.thoughtworks.xstream/xstream -->
+			<dependency>
+			    <groupId>com.thoughtworks.xstream</groupId>
+			    <artifactId>xstream</artifactId>
+			    <version>1.4.9</version>
+			</dependency>
+			<!-- fastjson -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>1.2.44</version>
+			</dependency>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>1.16.18</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

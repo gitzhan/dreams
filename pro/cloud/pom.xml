@@ -14,6 +14,7 @@
 	</parent>
 	<modules>
 		<!-- <module>pro-serv</module> -->
+		<module>pro-user</module>
 	</modules>
 
 	<dependencies>
