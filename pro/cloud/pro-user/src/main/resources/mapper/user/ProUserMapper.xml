@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dreams.cloud.usercenter.dao.ProUserDao" > 
+	<resultMap id="ProUserMap" type="com.dreams.cloud.usercenter.entity.ProUser">
+	    <result property="userId" column="user_id"/>
+        <result property="account" column="account"/>
+        <result property="password" column="password"/>
+        <result property="type" column="type"/>
+        <result property="phone" column="phone"/>
+        <result property="name" column="name"/>
+        <result property="gender" column="gender"/>
+        <result property="email" column="email"/>
+        <result property="photo" column="photo"/>
+        <result property="token" column="token"/>
+        <result property="cid" column="cid"/>
+        <result property="isDelete" column="is_delete"/>
+    </resultMap>
+   	
+   	<!-- 所有查询字段 -->
+   	<sql id="allSelectionColumn">
+		user_id,
+		account,
+		password,
+		type,
+		phone,
+		name,
+		gender,
+		email,
+		photo,
+		token,
+		cid,
+		is_delete
+	</sql>
+   	
+   	<!-- 根据ID查询实体数据 -->
+    <select id="loadById" resultMap="ProUserMap">
+        SELECT <include refid="allSelectionColumn"/> FROM pro_user WHERE user_id = #{userId} LIMIT 1
+    </select>
+
+    <!-- 添加数据 -->
+    <insert id="insert" parameterType="com.dreams.cloud.usercenter.entity.ProUser">
+        INSERT INTO pro_user (
+		 user_id, 
+		 account, 
+		 password, 
+		 type, 
+		 phone, 
+		 name, 
+		 gender, 
+		 email, 
+		 photo, 
+		 token, 
+		 cid
+		 )  VALUES (
+		 #{userId}, 
+		 #{account}, 
+		 #{password}, 
+		 #{type}, 
+		 #{phone}, 
+		 #{name}, 
+		 #{gender}, 
+		 #{email}, 
+		 #{photo}, 
+		 #{token}, 
+		 #{cid})
+    </insert>
+    
+    <!-- 根据ID删除数据-->
+    <delete id="deleteById">
+        DELETE FROM  pro_user WHERE user_id=#{userId}
+    </delete>
+</mapper>  

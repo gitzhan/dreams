@@ -17,10 +17,17 @@ server:
 feign: 
   hystrix: 
     enable: true
+
+spring:
+  datasource: 
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dreams-pro?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root1234  
     
-    
-    
-#mybatis: 
-#  type-aliases-package: com.james.project.lovememory
-#  config-locations: classpath:mybatis/mybatis-config.xml
-#  mapper-locations: classpath:mapper/*.xml
+#当mybatis的xml文件和mapper接口不在相同包下时，需要用mapperLocations属性指定xml文件的路径。  
+#*是个通配符，代表所有的文件，**代表所有目录下  
+mybatis: 
+#  type-aliases-package: com.dreams.cloud.usercenter
+  config-locations: classpath:mybatis-config.xml
+  mapper-locations: classpath:mapper/**/*.xml
