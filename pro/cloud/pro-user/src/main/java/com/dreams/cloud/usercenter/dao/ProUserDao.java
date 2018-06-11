@@ -26,4 +26,10 @@ public interface ProUserDao {
 	 */
 	void deleteById(@Param("userId")String userId);
 	
+	int updateToken(@Param("userId")String userId, @Param("token")String token);
+	
+	ProUser getByAccount(@Param("account")String account, @Param("password")String password);
+	
+	ProUser getByPhone(@Param("phone")String phone, @Param("password")String password);
+	
 }

@@ -10,9 +10,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.dreams.cloud.common.dto.user.LoginRequestDTO;
+import com.dreams.cloud.common.dto.user.LoginResponseDTO;
+import com.dreams.cloud.common.exception.business.LoginException;
 import com.dreams.cloud.common.util.UUIDUtil;
 import com.dreams.cloud.usercenter.dao.ProUserDao;
 import com.dreams.cloud.usercenter.entity.ProUser;
+import com.dreams.cloud.usercenter.service.user.UserService;
 
 @RestController
 @RequestMapping("/users")
@@ -21,6 +25,8 @@ public class UserController {
 	
 	@Resource
 	private ProUserDao userDao;
+	@Resource
+	private UserService userService;
 	
 	@GetMapping("/get")
 	public ProUser getUser() {
@@ -30,6 +36,14 @@ public class UserController {
 	@PostMapping("/regist")
 	public void regist(@RequestBody ProUser user) {
 		userDao.insert(user);
+	}
+	
+	@PostMapping("/login")
+	public LoginResponseDTO login(@RequestBody LoginRequestDTO loginRequest) {
+		if (null==loginRequest) {
+			throw new LoginException("参数错误");
+		}
+		return userService.login(loginRequest);
 	}
 	
 	@GetMapping("/regist/test")
