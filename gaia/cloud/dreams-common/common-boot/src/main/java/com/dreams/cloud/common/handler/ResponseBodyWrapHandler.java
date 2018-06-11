@@ -31,7 +31,7 @@ public class ResponseBodyWrapHandler implements HandlerMethodReturnValueHandler 
         if (returnValue!=null &&returnValue instanceof HttpResult) {
         	delegate.handleReturnValue(returnValue,returnType,mavContainer,webRequest);  
         }else {
-        	HttpResult result = new HttpResult(returnValue); 
+        	HttpResult<Object> result = new HttpResult<>(returnValue); 
         	delegate.handleReturnValue(result,returnType,mavContainer,webRequest);  
 		}
     }  

@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>pro-user</artifactId>
+	<artifactId>pro-zuul</artifactId>
 	<packaging>jar</packaging>
-	<name>pro-user</name>
-	<description>user-center</description>
+	<name>pro-zuul</name>
+	<description>pro-zuul</description>
 
 	<parent>
 		<groupId>com.dreams.cloud</groupId>
@@ -15,11 +15,20 @@
 	</parent>
 
 	<dependencies>
+		<!--自动生成的 -->
+		<!-- <dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+		</dependency> -->
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-		</dependency>
-	
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zuul</artifactId>
+        </dependency>
+        <!-- 默认的数据库依赖解决没有database配置的错误 -->
+        <dependency>
+	        <groupId>com.h2database</groupId>
+	        <artifactId>h2</artifactId>
+        </dependency>
 	</dependencies>
 
 	<build>
@@ -41,5 +50,6 @@
 			</snapshots>
 		</repository>
 	</repositories>
+
 
 </project>
