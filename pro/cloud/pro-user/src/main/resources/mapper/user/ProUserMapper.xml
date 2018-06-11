@@ -72,4 +72,27 @@
     <delete id="deleteById">
         DELETE FROM  pro_user WHERE user_id=#{userId}
     </delete>
+    
+    <update id="updateToken">
+    	UPDATE pro_user SET token=#{token} WHERE user_id=#{userId}
+    </update>
+    
+    <select id="getByAccount" resultMap="ProUserMap">
+    	SELECT <include refid="allSelectionColumn"/> 
+    	FROM pro_user 
+    	WHERE account=#{account} 
+   		AND password=#{password}
+   		AND is_delete=FALSE
+    	LIMIT 1
+    </select>
+    
+    <select id="getByPhone" resultMap="ProUserMap">
+    	SELECT <include refid="allSelectionColumn"/> 
+    	FROM pro_user 
+    	WHERE phone=#{phone} 
+   		AND password=#{password}
+   		AND is_delete=FALSE
+    	LIMIT 1
+    </select>
+    
 </mapper>  
