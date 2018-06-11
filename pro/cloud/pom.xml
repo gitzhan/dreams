@@ -18,10 +18,10 @@
 	</modules>
 
 	<dependencies>
-		<!-- <dependency>
+		<dependency>
 			<groupId>com.dreams.cloud</groupId>
 			<artifactId>common-pro</artifactId>
-		</dependency> -->
+		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>

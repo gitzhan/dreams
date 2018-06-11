@@ -8,9 +8,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import com.dreams.cloud.common.dto.user.LoginRequestDTO;
-import com.dreams.cloud.common.dto.user.LoginResponseDTO;
-import com.dreams.cloud.common.exception.business.LoginException;
+import com.dreams.cloud.base.common.dto.user.LoginRequestDTO;
+import com.dreams.cloud.base.common.dto.user.LoginResponseDTO;
+import com.dreams.cloud.base.common.exception.business.LoginException;
 import com.dreams.cloud.usercenter.dao.ProUserDao;
 import com.dreams.cloud.usercenter.entity.ProUser;
 import com.dreams.cloud.usercenter.util.TokenUtil;
@@ -44,5 +44,9 @@ public class UserService {
 		loginResponse.setAccessToken(token);
 		loginResponse.setExpires(TokenUtil.getExpires());
 		return loginResponse;
+	}
+	
+	public void logout() {
+		
 	}
 }

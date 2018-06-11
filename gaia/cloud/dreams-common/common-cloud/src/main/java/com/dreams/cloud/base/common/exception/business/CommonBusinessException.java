@@ -1,4 +1,4 @@
-package com.dreams.cloud.common.exception.business;
+package com.dreams.cloud.base.common.exception.business;
 
 import com.dreams.cloud.common.exception.BusinessException;
 import com.dreams.cloud.common.exception.ExceptionInfo;

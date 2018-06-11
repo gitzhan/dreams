@@ -10,10 +10,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dreams.cloud.common.dto.user.LoginRequestDTO;
-import com.dreams.cloud.common.dto.user.LoginResponseDTO;
-import com.dreams.cloud.common.exception.business.LoginException;
+import com.dreams.cloud.base.common.auth.TokenRequired;
+import com.dreams.cloud.base.common.auth.UserInfo;
+import com.dreams.cloud.base.common.dto.user.LoginRequestDTO;
+import com.dreams.cloud.base.common.dto.user.LoginResponseDTO;
+import com.dreams.cloud.base.common.exception.business.LoginException;
 import com.dreams.cloud.common.util.UUIDUtil;
+import com.dreams.cloud.pro.common.auth.AccessUser;
 import com.dreams.cloud.usercenter.dao.ProUserDao;
 import com.dreams.cloud.usercenter.entity.ProUser;
 import com.dreams.cloud.usercenter.service.user.UserService;
@@ -39,11 +42,18 @@ public class UserController {
 	}
 	
 	@PostMapping("/login")
-	public LoginResponseDTO login(@RequestBody LoginRequestDTO loginRequest) {
+	@TokenRequired
+	public LoginResponseDTO login(@UserInfo AccessUser user, @RequestBody LoginRequestDTO loginRequest) {
 		if (null==loginRequest) {
 			throw new LoginException("参数错误");
 		}
 		return userService.login(loginRequest);
+	}
+	
+	@PostMapping("/logout")
+	@TokenRequired
+	public void logout(@UserInfo AccessUser user) {
+		userService.logout();
 	}
 	
 	@GetMapping("/regist/test")

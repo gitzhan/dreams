@@ -1,4 +1,4 @@
-package com.dreams.cloud.common.config;
+package com.dreams.cloud.base.common.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

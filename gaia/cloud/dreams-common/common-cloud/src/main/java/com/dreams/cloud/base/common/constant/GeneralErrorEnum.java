@@ -1,4 +1,4 @@
-package com.dreams.cloud.common.constant;
+package com.dreams.cloud.base.common.constant;
 
 import com.dreams.cloud.common.exception.ExceptionInfo;
 

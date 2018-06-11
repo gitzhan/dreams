@@ -1,4 +1,4 @@
-package com.dreams.cloud.common.dto.user;
+package com.dreams.cloud.base.common.dto.user;
 
 import java.util.Date;
 
