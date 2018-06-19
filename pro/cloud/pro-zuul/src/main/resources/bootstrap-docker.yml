@@ -6,14 +6,14 @@ server:
   
 spring:
   profiles:
-    active: dev
+    active: docker
   application:
     name: pro-zuul
     
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8760/eureka/
+      defaultZone: http://server-master:8760/eureka/
       
 zuul:
   routes:

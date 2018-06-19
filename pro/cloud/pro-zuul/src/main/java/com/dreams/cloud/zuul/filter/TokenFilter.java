@@ -21,7 +21,7 @@ public class TokenFilter extends ZuulFilter{
 	private String[] skipTokenUrls;
 	
 	/**
-	 *  filterType：返回一个字符串代表过滤器的类型，在zuul中定义了四种不同生命周期的过滤器类型，具体如下： 
+	    filterType：返回一个字符串代表过滤器的类型，在zuul中定义了四种不同生命周期的过滤器类型，具体如下： 
 		pre：路由之前
 		routing：路由之时
 		post： 路由之后
