@@ -15,6 +15,7 @@
 	<modules>
 		<!-- <module>pro-serv</module> -->
 		<module>pro-user</module>
+		<module>pro-zuul</module>
 	</modules>
 
 	<dependencies>
