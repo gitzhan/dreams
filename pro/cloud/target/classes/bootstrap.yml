@@ -1,0 +1,28 @@
+info:
+  version: 1.0.0-SNAPSHOT
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      
+server:
+  port: 8769
+  
+spring:
+  application:
+    name: pro-zuul
+    
+zuul:
+  routes:
+    api-a:
+      path: /api-user/**
+      serviceId: pro-user
+#    api-b:
+#      path: /api-serv/**
+#      serviceId: pro-user
+
+
+token: 
+  filter: 
+    skipUrl: login,regist,hi
