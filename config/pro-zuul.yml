@@ -22,7 +22,7 @@ zuul:
 
 token:
   filter:
-    skipUrl: login,regist,hi,
+    skipUrl: login,regist,hi,a
     
     
 #spring: 
