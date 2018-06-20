@@ -6,6 +6,8 @@ import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 import org.springframework.stereotype.Component;
 
 import com.alibaba.fastjson.JSON;
@@ -13,6 +15,7 @@ import com.dreams.cloud.common.structs.HttpResult;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 
+@RefreshScope
 @Component
 public class TokenFilter extends ZuulFilter{
 	private static final Logger LOGGER = LoggerFactory.getLogger(TokenFilter.class);
@@ -43,11 +46,12 @@ public class TokenFilter extends ZuulFilter{
 
 	@Override
 	public String filterType() {
-		return "pre";
+		return FilterConstants.PRE_TYPE;
 	}
 	
 	@Override
 	public Object run() {
+		LOGGER.info("skipTokenUrls: {}", JSON.toJSONString(skipTokenUrls));
 		RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         String requestUrl = request.getRequestURL().toString();

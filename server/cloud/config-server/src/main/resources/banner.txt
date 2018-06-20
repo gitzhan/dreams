@@ -1,0 +1,25 @@
+
+
+                                                          ffffffffffffffff    iiii
+                                                         f::::::::::::::::f  i::::i
+                                                        f::::::::::::::::::f  iiii
+                                                        f::::::fffffff:::::f
+    cccccccccccccccc   ooooooooooo   nnnn  nnnnnnnn     f:::::f       ffffffiiiiiii    ggggggggg   ggggg                     ssssssssss       eeeeeeeeeeee    rrrrr   rrrrrrrrrvvvvvvv           vvvvvvv eeeeeeeeeeee    rrrrr   rrrrrrrrr
+  cc:::::::::::::::c oo:::::::::::oo n:::nn::::::::nn   f:::::f             i:::::i   g:::::::::ggg::::g                   ss::::::::::s    ee::::::::::::ee  r::::rrr:::::::::rv:::::v         v:::::vee::::::::::::ee  r::::rrr:::::::::r
+ c:::::::::::::::::co:::::::::::::::on::::::::::::::nn f:::::::ffffff        i::::i  g:::::::::::::::::g                 ss:::::::::::::s  e::::::eeeee:::::eer:::::::::::::::::rv:::::v       v:::::ve::::::eeeee:::::eer:::::::::::::::::r
+c:::::::cccccc:::::co:::::ooooo:::::onn:::::::::::::::nf::::::::::::f        i::::i g::::::ggggg::::::gg --------------- s::::::ssss:::::se::::::e     e:::::err::::::rrrrr::::::rv:::::v     v:::::ve::::::e     e:::::err::::::rrrrr::::::r
+c::::::c     ccccccco::::o     o::::o  n:::::nnnn:::::nf::::::::::::f        i::::i g:::::g     g:::::g  -:::::::::::::-  s:::::s  ssssss e:::::::eeeee::::::e r:::::r     r:::::r v:::::v   v:::::v e:::::::eeeee::::::e r:::::r     r:::::r
+c:::::c             o::::o     o::::o  n::::n    n::::nf:::::::ffffff        i::::i g:::::g     g:::::g  ---------------    s::::::s      e:::::::::::::::::e  r:::::r     rrrrrrr  v:::::v v:::::v  e:::::::::::::::::e  r:::::r     rrrrrrr
+c:::::c             o::::o     o::::o  n::::n    n::::n f:::::f              i::::i g:::::g     g:::::g                        s::::::s   e::::::eeeeeeeeeee   r:::::r               v:::::v:::::v   e::::::eeeeeeeeeee   r:::::r
+c::::::c     ccccccco::::o     o::::o  n::::n    n::::n f:::::f              i::::i g::::::g    g:::::g                  ssssss   s:::::s e:::::::e            r:::::r                v:::::::::v    e:::::::e            r:::::r
+c:::::::cccccc:::::co:::::ooooo:::::o  n::::n    n::::nf:::::::f            i::::::ig:::::::ggggg:::::g                  s:::::ssss::::::se::::::::e           r:::::r                 v:::::::v     e::::::::e           r:::::r
+ c:::::::::::::::::co:::::::::::::::o  n::::n    n::::nf:::::::f            i::::::i g::::::::::::::::g                  s::::::::::::::s  e::::::::eeeeeeee   r:::::r                  v:::::v       e::::::::eeeeeeee   r:::::r
+  cc:::::::::::::::c oo:::::::::::oo   n::::n    n::::nf:::::::f            i::::::i  gg::::::::::::::g                   s:::::::::::ss    ee:::::::::::::e   r:::::r                   v:::v         ee:::::::::::::e   r:::::r
+    cccccccccccccccc   ooooooooooo     nnnnnn    nnnnnnfffffffff            iiiiiiii    gggggggg::::::g                    sssssssssss        eeeeeeeeeeeeee   rrrrrrr                    vvv            eeeeeeeeeeeeee   rrrrrrr
+                                                                                                g:::::g
+                                                                                    gggggg      g:::::g
+                                                                                    g:::::gg   gg:::::g
+                                                                                     g::::::ggg:::::::g
+                                                                                      gg:::::::::::::g
+                                                                                        ggg::::::ggg
+                                                                                           gggggg

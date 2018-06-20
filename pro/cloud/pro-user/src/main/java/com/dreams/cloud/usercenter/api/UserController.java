@@ -35,7 +35,7 @@ public class UserController {
 	public ProUser getUser() {
 		return userDao.loadById("111111");
 	}
-	
+
 	@PostMapping("/regist")
 	public void regist(@RequestBody ProUser user) {
 		userDao.insert(user);
@@ -73,4 +73,5 @@ public class UserController {
 		user.setToken(user.getUserId()+"@"+System.currentTimeMillis());
 		userDao.insert(user);
 	}
+
 }
