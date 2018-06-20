@@ -3,6 +3,10 @@ info:
     name: pro-zuul
     version: 1.0.0
 
+management:
+  security:
+    enabled: false
+
 zuul:
   routes:
     api-a:
