@@ -18,7 +18,7 @@ zuul:
 
 token:
   filter:
-    skipUrl: login,regist,hi,a
+    skipUrl: login,regist,hi,
     
     
 #spring: 
