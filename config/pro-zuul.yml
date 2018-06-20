@@ -1,2 +1,21 @@
+info:
+  app:
+    name: pro-zuul
+    version: 1.0.0
 
-version: 1.0.0
+zuul:
+  routes:
+    api-a:
+      path: /api-user/**
+      serviceId: pro-user
+#    api-b:
+#      path: /api-serv/**
+#      serviceId: pro-user
+    local:
+      path: /local/**
+      url: forward:/local
+
+
+token:
+  filter:
+    skipUrl: login,regist,hi
