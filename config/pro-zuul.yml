@@ -3,6 +3,10 @@ info:
     name: pro-zuul
     version: 1.0.0
 
+management:
+  security:
+    enabled: false
+
 zuul:
   routes:
     api-a:
@@ -18,12 +22,6 @@ zuul:
 
 token:
   filter:
-    skipUrl: login,regist,hi
+    skipUrl: login,regist,hi,test
     
-    
-spring: 
-  rabbitmq: 
-    host: localhost
-    port: 15672
-    username: guest
-    password: guest
+
