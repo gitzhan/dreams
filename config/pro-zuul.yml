@@ -21,9 +21,9 @@ token:
     skipUrl: login,regist,hi
     
     
-spring: 
-  rabbitmq: 
-    host: 10.12.66.66
-    port: 5672
+#spring: 
+#  rabbitmq: 
+#    host: 10.12.66.66
+#    port: 5672
 #    username: guest
 #    password: guest
