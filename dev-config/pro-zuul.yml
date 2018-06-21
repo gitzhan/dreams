@@ -29,6 +29,6 @@ zuul:
 
 token:
   filter:
-    skipUrl: login,regist,hi,test
+    skipUrl: login,regist,dev-config
     
 
