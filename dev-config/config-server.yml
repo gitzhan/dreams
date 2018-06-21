@@ -1,0 +1,4 @@
+info:
+  app:
+    name: config-server
+    version: 1.0.0

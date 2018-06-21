@@ -9,22 +9,16 @@ spring:
     active: docker
   application:
     name: pro-zuul
+  cloud:
+    config:
+      label: master
+#      profile: dev
+      discovery:
+        enabled: true
+        service-id: config-server
     
 eureka:
   client:
     serviceUrl:
       defaultZone: http://server-master:8760/eureka/
-      
-zuul:
-  routes:
-    api-a:
-      path: /api-user/**
-      serviceId: pro-user
-#    api-b:
-#      path: /api-serv/**
-#      serviceId: pro-user
 
-
-token: 
-  filter: 
-    skipUrl: login,regist,hi

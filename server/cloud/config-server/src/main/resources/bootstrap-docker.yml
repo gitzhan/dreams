@@ -6,7 +6,7 @@ server:
   
 spring:
   profiles:
-    active: dev
+    active: docker
   application:
     name: config-server
   cloud:
@@ -15,7 +15,7 @@ spring:
       server:
         git:
           uri: https://github.com/gitzhan/dreams/
-          searchPaths: dev-config
+          searchPaths: config
 #           公开仓库可以不用写用户名和密码
 #          username:
 #          password:
@@ -23,5 +23,5 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8760/eureka/
+      defaultZone: http://server-master:8760/eureka/
 
