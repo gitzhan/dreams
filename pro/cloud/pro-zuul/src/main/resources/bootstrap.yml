@@ -16,15 +16,21 @@ spring:
       discovery:
         enabled: true
         service-id: config-server
+      fail-fast: true
 
-#  rabbitmq:
-#    host: localhost
-#    port: 5672
-#    username: guest
-#    password: guest
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
     
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8760/eureka/
+  instance:
+    # 续约更新时间间隔（默认30秒）
+    lease-renewal-interval-in-seconds: 10
+    # 续约到期时间（默认90秒）
+    lease-expiration-duration-in-seconds: 30
       
