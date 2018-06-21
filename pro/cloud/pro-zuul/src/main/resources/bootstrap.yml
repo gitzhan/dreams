@@ -1,14 +1,22 @@
 info:
+  app:
+    name: 路由网关
   version: 1.0.0-SNAPSHOT
 
 server: 
   port: 8761
+  session:
+    timeout: 10
+  tomcat:
+    max-threads: 1000
+    uri-encoding: UTF-8
   
 spring:
   profiles:
     active: dev
   application:
     name: pro-zuul
+
   cloud:
     config:
       label: master

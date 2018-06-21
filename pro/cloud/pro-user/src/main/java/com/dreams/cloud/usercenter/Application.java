@@ -11,9 +11,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-//@EnableEurekaClient
+//@EnableEurekaClient 用EnableDiscoveryClient代替
 @EnableDiscoveryClient
 @EnableFeignClients
+//@EnableHystrix //开启断路器注解 http://host:port/hystrix.stream
+//@EnableHystrixDashboard //开启断路器监控 http://host:port/hystrix
 @RestController
 //@ComponentScan
 //@ServletComponentScan

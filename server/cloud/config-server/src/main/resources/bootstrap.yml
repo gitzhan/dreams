@@ -1,4 +1,6 @@
 info:
+  app:
+    name: 配置中心服务器
   version: 1.0.0-SNAPSHOT
 
 server: 
@@ -24,4 +26,9 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8760/eureka/
+  instance:
+    # 续约更新时间间隔（默认30秒）
+    lease-renewal-interval-in-seconds: 10
+    # 续约到期时间（默认90秒）
+    lease-expiration-duration-in-seconds: 30
 

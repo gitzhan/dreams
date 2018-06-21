@@ -1,14 +1,22 @@
 info:
+  app:
+    name: 路由网关
   version: 1.0.0-SNAPSHOT
 
 server: 
   port: 8761
+  session:
+    timeout: 10
+  tomcat:
+    max-threads: 1000
+    uri-encoding: UTF-8
   
 spring:
   profiles:
     active: docker
   application:
     name: pro-zuul
+
   cloud:
     config:
       label: master
@@ -16,9 +24,21 @@ spring:
       discovery:
         enabled: true
         service-id: config-server
+      fail-fast: true
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
     
 eureka:
   client:
     serviceUrl:
       defaultZone: http://server-master:8760/eureka/
+  instance:
+    # 续约更新时间间隔（默认30秒）
+    lease-renewal-interval-in-seconds: 10
+    # 续约到期时间（默认90秒）
+    lease-expiration-duration-in-seconds: 30
 
