@@ -16,6 +16,11 @@ spring:
     active: docker
   application:
     name: pro-zuul
+    
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
 
   cloud:
     config:

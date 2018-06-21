@@ -1,0 +1,17 @@
+docker build -t superzhan/eurekaserver:latest ./
+
+docker run -p 8760:8760 -t superzhan/eurekaserver
+docker run --name eureka-server -p 8760:8760 -t superzhan/eurekaserver
+
+docker run -p 8999:8999 -t superzhan/config-server
+docker run --name config-server --link eureka-server:8760 -p 8999:8999 -t superzhan/config-server
+ 
+ 
+ 
+ 
+docker run -p 8761: 8761 -t forezp/eureka-server 
+docker run -p 8763: 8763 -t forezp/service-hi 
+应该改为： 
+docker run --name eureka-server -p 8761:8761 -t forezp/eureka-server 
+docker run --link eureka-server:8761 -p 8763:8763 -t forezp/service-hi 
+要不然会报错误： UnknownHostException: eureka-server
