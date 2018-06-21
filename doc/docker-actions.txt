@@ -1,5 +1,7 @@
 docker build -t superzhan/eurekaserver:latest ./
 
+docker build -t superzhan/config-server:latest ./
+
 docker run -p 8760:8760 -t superzhan/eurekaserver
 docker run --name eureka-server -p 8760:8760 -t superzhan/eurekaserver
 
